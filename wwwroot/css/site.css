@@ -1,0 +1,61 @@
+/* ============================================================================
+   === File: site.css
+   === Description: Global stylesheet for the Klemmbausteine application layout. 
+   ===              Manages page structure, positioning, scrolling behavior, 
+   ===              and fixed header/footer layout for a clean, stable UI.
+   ============================================================================ */
+
+/* --- Base HTML and body layout configuration --- */
+html, body {
+    position: static !important;
+    min-height: 100%;
+    margin: 0 !important;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* --- Header positioning to remain above content --- */
+header {
+    position: relative;
+    z-index: 2000;
+}
+
+/* --- Fixed top navigation bar with shadow and border --- */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2001;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* --- Main content container with scrollable body area --- */
+body > .container {
+    position: absolute;
+    top: 64px;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    z-index: 1;
+}
+
+/* --- Footer styling, fixed at the bottom --- */
+footer,
+footer.footer {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #f8f9fa;
+    border-top: 1px solid #e5e5e5;
+    text-align: start;
+    line-height: 60px;
+    z-index: 2000;
+    color: #6c757d;
+}

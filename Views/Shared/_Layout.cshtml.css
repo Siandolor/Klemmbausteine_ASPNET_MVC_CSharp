@@ -1,0 +1,108 @@
+﻿/* ============================================================================
+   === File: _Layout.cshtml.css
+   === Description: Custom stylesheet for the main layout (_Layout.cshtml) of the 
+   ===              Klemmbausteine application. Provides layout, typography, and 
+   ===              navigation bar styling consistent with the Bootstrap theme.
+   ============================================================================ */
+
+/* --- Navbar brand styling --- */
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    margin: 0;
+    padding: 0 1rem;
+    font-weight: 600;
+}
+
+/* --- General link styles --- */
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #0d6efd;
+        text-decoration: underline;
+    }
+
+/* --- Primary button color scheme --- */
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* --- Navbar layout and spacing --- */
+.navbar,
+#mainNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0;
+}
+
+    /* --- Navbar navigation alignment --- */
+    #mainNavbar .navbar-nav {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+
+    /* --- Navbar links and text alignment --- */
+    .navbar-brand,
+    .nav-link,
+    .navbar-text,
+    .navbar .btn-link {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        padding: 0 0.75rem;
+        margin: 0;
+    }
+
+/* --- Center alignment for navbar text --- */
+.navbar-text {
+    text-align: center;
+}
+
+/* --- Navbar link button reset --- */
+.navbar .btn-link {
+    background: none;
+    border: none;
+    color: #212529;
+    text-decoration: none;
+}
+
+    /* --- Hover effect for navbar buttons --- */
+    .navbar .btn-link:hover {
+        color: #0d6efd;
+        text-decoration: underline;
+    }
+
+/* --- Border utilities --- */
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* --- Box shadow utility --- */
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* --- Cookie consent or policy button styling --- */
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* --- Footer layout --- */
+.footer {
+    white-space: nowrap;
+    line-height: 25px;
+}

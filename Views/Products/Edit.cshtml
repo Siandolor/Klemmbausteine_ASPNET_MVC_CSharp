@@ -1,0 +1,87 @@
+﻿@model Klemmbausteine.Models.Product
+
+@* ============================================================================
+   === File: Edit.cshtml
+   === Description: View for editing an existing Product entry in the 
+   ===              Klemmbausteine inventory management system. Displays a 
+   ===              form with validation for modifying product fields such as 
+   ===              name, description, price, category, stock, and image link.
+   ============================================================================ *@
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        @* --- Form to edit an existing product --- *@
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            @* --- Input: Product Name --- *@
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            @* --- Input: Product Description --- *@
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            @* --- Input: Net Price --- *@
+            <div class="form-group">
+                <label asp-for="NettoPrice" class="control-label"></label>
+                <input asp-for="NettoPrice" class="form-control" />
+                <span asp-validation-for="NettoPrice" class="text-danger"></span>
+            </div>
+
+            @* --- Input: Category --- *@
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+
+            @* --- Input: Stock Quantity --- *@
+            <div class="form-group">
+                <label asp-for="InStock" class="control-label"></label>
+                <input asp-for="InStock" class="form-control" />
+                <span asp-validation-for="InStock" class="text-danger"></span>
+            </div>
+
+            @* --- Input: Image URL --- *@
+            <div class="form-group">
+                <label asp-for="ImageLink" class="control-label"></label>
+                <input asp-for="ImageLink" class="form-control" />
+                <span asp-validation-for="ImageLink" class="text-danger"></span>
+            </div>
+
+            @* --- Submit button to save changes --- *@
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@* --- Navigation link to return to the product list --- *@
+<div>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Back to List</a>
+</div>
+
+@section Scripts {
+    @* --- Loads client-side validation scripts --- *@
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
